@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw5</title>
+    <script> 
+        function changeingColor(el) {
+            
+            let flag = (el.innerText) * -1;
+
+            if (flag == 1) {
+
+                el.style.backgroundColor = 'green'
+                el.innerText = 1 ;
+
+            }
+            else {
+                el.style.backgroundColor = 'red'
+                el.innerText = -1;
+            }
+
+            if (document.getElementById('btn1').style.backgroundColor == 'green' && (document.getElementById('btn2').style.backgroundColor == 'green') && (document.getElementById('btn3').style.backgroundColor == 'green')) {
+                document.getElementById('lastBox').style.backgroundColor = 'green'
+            }
+                
+         else
+                document.getElementById('lastBox').style.backgroundColor = 'red'
+
+        }
+      
+
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <button id="btn1" style="background-color: red; width: 100px; height: 100px"  onclick="changeingColor(this)">-1</button>
+            </td>
+
+            <td>
+                <button id="btn2" type="button" style="background-color:red ; width:100px ; height:100px"  onclick="changeingColor(this)">-1</button>
+            </td>
+
+            <td>
+                <button id="btn3" type="button" style="background-color: red; width: 100px; height: 100px" onclick="changeingColor(this)">-1</button>
+            </td>
+
+            <td style="border: 5px solid; width: 90px; height: 90px" >
+                <div style="background-color: red; width: 60px; height: 60px ; margin:13px ; padding:3px" id="lastBox" >    </div>
+
+            </td>
+        </tr>
+    </table>
+        
+   
+        
+    
+        
+    
+        
+    
+
+ 
+</body>
+</html>
